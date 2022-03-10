@@ -127,6 +127,6 @@ SOFTWARE.
 [2]:https://github.com/KR1470R/firefox-bookmarks-script#instruction
 [2.1]:https://github.com/KR1470R/firefox-bookmarks-script#installation
 [2.2]:https://github.com/KR1470R/firefox-bookmarks-script#usage
-[2.3]:https://github.com/KR1470R/firefox-bookmarks-script#unsupported_os
+[2.3]:https://github.com/KR1470R/firefox-bookmarks-script#supported-os
 [2.4]:https://github.com/KR1470R/firefox-bookmarks-script#uninstall
 [3]:https://github.com/KR1470R/firefox-bookmarks-script#license

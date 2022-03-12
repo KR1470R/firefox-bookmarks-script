@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 #
 #
 #                   _________-----_____
@@ -27,25 +27,26 @@ declare -A file_sequence=(
   ["prog_study_bookmarks"]="prog-study"
   ["entertainment_bookmarks"]="entertainment"
 )
-declare root_folder=~/.config/firefox-bookmarks
+
+root_folder=~/.config/firefox-bookmarks
 
 links=()
 
 echo "Starting..."
 
-for varname in "${!file_sequence[@]}"; do
+for varname in "${$(eval "\$$file_sequence")[@]}"; do
   path_to_bookmarks=$root_folder/bookmarks/${file_sequence[$varname]}.bookmarks
   path_to_logs=$root_folder/logs/${file_sequence[$varname]}.logs
-  if [[ $(cat "$path_to_bookmarks" | wc -c) -lt 3 ]]; then
+  if [ "$(cmd < file | wc -c)" -lt 3 ]; then
     echo ">>> ${file_sequence[$varname]} is empty. Passing..."
     continue
   fi
   echo "Getting from $path_to_bookmarks..."
   while read -r line; do
     links+=$line" "
-    echo $line
-  done <$path_to_bookmarks
+    echo "$line"
+  done <"$path_to_bookmarks"
   echo "Running firefox with ${file_sequence[$varname]} bookmarks..."
-  nohup firefox $(for link in "${links[@]}"; do echo $link; done) >$path_to_logs 2>$path_to_logs
+  nohup firefox "$(for link in "${links[@]}"; do echo "$link"; done)" >"$path_to_logs" 2>"$path_to_logs"
   links=()
 done

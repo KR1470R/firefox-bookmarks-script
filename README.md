@@ -1,11 +1,10 @@
 # firefox-bookmarks-script
 
 ## Overview
-
-this project was made to make life easier in solving Mozilla Firefox problems. Mozilla doesn't restore previous session,
+This project made for resolve problem with bookmarks in Mozilla Firefox. Sometimes, Firefox doesn't restore previous session,
 so you can lose all your value bookmarks. You can manage your bookmarks the way you want using **bookmrk** tool.
 
-Let's create three groups: ***zno-study***, ***prog-study*** and ***entertainment***, so you can store your bookmarks
+After installation you have three groups where you can allocate your bookmark by type you want: ***zno-study***, ***prog-study*** and ***entertainment***, so you can store your bookmarks
 as ***zno-study*** — for school bookmarks, ***prog-study*** — for programming bookmarks and ***entertainment*** — for
 your films and other stuff. Of course, if you need only one of these groups, for example, ***entertainment*** you may
 use only one group, ***other groups*** gonna be ignored if they are empty. It means that each of the group in the
@@ -24,8 +23,7 @@ bookmarks is a separate Firefox window with your saved bookmarks!
 
 ## Requirements
 
-All what you need is **Mozilla Firefox Browser** and **zsh** (maybe **bash** fits and works fine, but i haven't
-tested [it won't work, i've tested]).
+All what you need is **Mozilla Firefox Browser** and **zsh**
 
 ## Instruction
 
@@ -82,7 +80,7 @@ bookmrk prog -a www.example.com
 
 You can do it with every group of bookmark.
 
-Here is the table of bookmarks types that we we have put to the command:
+Here is the table of bookmarks types that we have put to the command:
 
 | Parameter type name | Bookmark type fullname |
 |---------------------|------------------------|
